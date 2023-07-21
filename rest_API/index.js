@@ -18,6 +18,6 @@ server.use('/user', userRouter)
 server.use(express.static('./public'))
 
 server.listen(PORT, () => {
-    // db.sequelize.sync({ alter : true})
+    db.sequelize.sync({ alter : true})
     console.log(`server running at port : ${PORT}`);
 })
